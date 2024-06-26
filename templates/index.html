@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive News Headlines</title>
+    <style>
+        body {
+            background-color: #071952;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .headline-box {
+            background-color: #37B7C3;
+            border: 1px solid #088395;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            border-radius: 10px;
+        }
+        .headline-box a {
+            text-decoration: none;
+            color: #071952;
+        }
+        .headline-box a:hover {
+            text-decoration: underline;
+        }
+        .headline-box:hover{
+            background-color: #42d5e2;
+            border: 1px solid #088395;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:#EBF4F6"><center>Positive News Headlines</center></h1>
+    {% for headline in headlines %}
+        <div class="headline-box">
+            <p>{{ headline.title }}</p>
+            <a href="{{ headline.link }}" target="_blank">Read more</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
